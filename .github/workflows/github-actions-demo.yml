@@ -18,7 +18,7 @@ jobs:
           echo "using branch: ${{github.ref}}"
       - run: 
           echo "${{toJosn(runner)}}"
-          echo "${{toJosn(context)}}"
+          echo "${{toJson(context)}}"
       - uses: actions/checkout@v3.3.0
       - name: list files
         run: |
