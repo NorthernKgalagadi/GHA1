@@ -13,12 +13,14 @@ jobs:
   Build: 
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: trigger info
+        run: |
           echo "triggered by: ${{github.event.name}}"
           echo "using branch: ${{github.ref}}"
-      - run: |
-          echo "runner: \n${{toJson(runner)}}"
-          echo "github: \n${{toJson(github)}}"
+      - name: environment info
+        run: |
+          echo "runner: ${{toJson(runner)}}"
+          echo "github: ${{toJson(github)}}"
       - uses: actions/checkout@v3.3.0
       - name: list files
         run: |
