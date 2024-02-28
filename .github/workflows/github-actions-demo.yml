@@ -16,6 +16,9 @@ jobs:
       - run: |
           echo "triggered by: ${{github.event.name}}"
           echo "using branch: ${{github.ref}}"
+      - run: 
+          echo "${{toJosn(runner)}}"
+          echo "${{toJosn(context)}}"
       - uses: actions/checkout@v3.3.0
       - name: list files
         run: |
