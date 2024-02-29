@@ -20,7 +20,7 @@ jobs:
       - name: Greet someone
         run: echo "Hello ${{ inputs.who-to-greet }}"        
       - name: Show time
-        id: show:time
+        id: show-time
         run: echo "time=$(date)"
       - name: Set time
         id: time
