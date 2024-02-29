@@ -19,8 +19,8 @@ jobs:
     steps:
       - name: Greet someone
         run: echo "Hello ${{ inputs.who-to-greet }}"        
-      - name: show time
-        id: time
+      - name: Show time
+        id: show:time
         run: echo "time=$(date)"
       - name: Set time
         id: time
